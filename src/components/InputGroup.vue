@@ -20,8 +20,7 @@
         <input 
           :id="'name-' + index"
           type="text"
-          :value="group.name"
-          @input="$emit('update:group', { ...group, name: $event.target.value })"
+          v-model="group.name"
           class="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           :class="{ 'border-red-500': errors.name }"
         />
@@ -34,8 +33,7 @@
         <input 
           :id="'email-' + index"
           type="email"
-          :value="group.email"
-          @input="$emit('update:group', { ...group, email: $event.target.value })"
+          v-model="group.email"
           class="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           :class="{ 'border-red-500': errors.email }"
         />
@@ -48,8 +46,7 @@
         <input 
           :id="'mobile-' + index"
           type="tel"
-          :value="group.mobile"
-          @input="$emit('update:group', { ...group, mobile: $event.target.value })"
+          v-model="group.mobile"
           class="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           :class="{ 'border-red-500': errors.mobile }"
         />
